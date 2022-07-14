@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { notes } = require()
+
 
 
 router.get('/notes', (req, res) => {
