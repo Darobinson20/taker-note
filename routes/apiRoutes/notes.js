@@ -1,4 +1,11 @@
 const router = require('express').Router();
+const notes = require('../../db/db.json');
+const fs = require('fs');
+
+ 
+const data = fs.readFileSync('./db/db.json', {encoding: 'utf8'});
+
+
 
 
 
@@ -13,5 +20,7 @@ router.post('./notes', (req, res) => {
   })
   .catch((err) => res.status(404).json(err))
 });
+
+// notes();
 
 module.exports = router;
